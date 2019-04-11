@@ -1,0 +1,116 @@
+<html>
+<body>
+<center>
+<h3>NAME<input type="text" id="n1" name="name">
+<h3>EMPLOYEE ID<input type="text" id="n2" name="id"><br>
+
+<br><input type="radio" id="g1" name="in" value="indoor" onchange="fun1()">Indoor
+ 
+ <select id="in" disabled onchange="fun3()">
+	<option value=""> </option>
+    <option value="ten">tennis</option>
+    <option value="car">carom</option>
+    <option value="che">chess</option>
+  
+  </select>
+<input type="button" id="r1" value="Register" onclick="fun4()" disabled><br>
+
+
+<br><input type="radio" id="g2" name="in" value="outdoor" onchange="fun2()">Outdoor
+
+
+<select id="out" disabled onchange="edu()">
+	<option value="UG"> </option>
+    <option value="UG">cricket</option>
+    <option value="PG">batmeton</option>
+    <option value="PHD">volley ball</option>
+  </select>
+<input type="button" id="r2" value="Register" onclick="fun5()" disabled>
+
+
+<script>
+count= 0
+out=0
+into=0
+function fun1()
+
+{
+document.getElementById("r1").disabled=false;   
+document.getElementById("in").disabled=false;
+document.getElementById("out").disabled=true;   
+document.getElementById("r2").disabled=true;
+}	
+
+
+function fun2()
+{
+   document.getElementById("r2").disabled=false;   
+   document.getElementById("out").disabled=false;
+   document.getElementById("r1").disabled=true;   
+document.getElementById("in").disabled=true;
+}
+
+
+
+function fun4()
+{
+if(count<3)
+{
+if(into<3)
+{
+
+	alert("Registered "+(into+1)+" event")
+	into=into+1
+	count=into+out
+}  
+}
+if(into==2)
+{
+alert("Registered 2 from indoor and select one from outdoor")
+}
+if(into==3)
+{
+alert("Registered three event succesfully")
+}
+if(count==3)
+{
+alert("register"+into+" indoor event and"+out+" outdoor event")
+alert("Registered three event succesfully")
+}
+}
+
+
+
+function fun5()
+{
+if(count<3)
+{
+	if(out<3)
+	
+	{
+	alert("Registered "+(out+1)+" event")
+	out=out+1
+	count=into+out
+	}
+}
+if(out==2)
+{
+alert("Registered 2 from outdoor and select one from indoor")
+}
+if(out==3)
+{
+alert("Registered three succesfully")
+}
+if(count==3)
+{
+alert("Registered three succesfully")
+alert("register"+into+" indoor event and"+out+" outdoor event")
+}
+}
+
+</script>
+
+
+
+</html>
+</body>
